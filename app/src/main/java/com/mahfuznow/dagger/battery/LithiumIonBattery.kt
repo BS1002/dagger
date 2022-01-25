@@ -1,8 +1,9 @@
 package com.mahfuznow.dagger.battery
 
 import android.util.Log
+import javax.inject.Inject
 
-class LithiumIonBattery: Battery {
+class LithiumIonBattery @Inject constructor(): Battery {
     override fun charge() {
         Log.d("TAG", "Lithium Ion Battery is charging")
     }

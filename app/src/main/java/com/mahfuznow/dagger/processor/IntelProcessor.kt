@@ -2,8 +2,9 @@ package com.mahfuznow.dagger.processor
 
 import android.util.Log
 import com.mahfuznow.dagger.processor.register.Register
+import javax.inject.Inject
 
-class IntelProcessor (override val register: Register): Processor {
+class IntelProcessor @Inject constructor (override val register: Register): Processor {
 
     override fun process() {
         Log.d("TAG", "Intel Processor is Processing")

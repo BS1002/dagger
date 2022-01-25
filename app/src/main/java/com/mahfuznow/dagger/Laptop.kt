@@ -1,11 +1,12 @@
 package com.mahfuznow.dagger
 
 import android.util.Log
-import com.mahfuznow.dagger.battery.Battery
-import com.mahfuznow.dagger.processor.Processor
+import com.mahfuznow.dagger.battery.LithiumIonBattery
+import com.mahfuznow.dagger.processor.IntelProcessor
+import javax.inject.Inject
 
 
-class Laptop (private val processor: Processor, private val battery: Battery) {
+class Laptop @Inject constructor  (private val processor: IntelProcessor, private val battery: LithiumIonBattery) {
     fun build() {
         Log.d("TAG", "Laptop is built with $processor and $battery")
     }
