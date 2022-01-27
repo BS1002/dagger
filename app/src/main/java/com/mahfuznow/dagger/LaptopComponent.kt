@@ -4,9 +4,9 @@ import dagger.Component
 
 @Component
 interface LaptopComponent {
-    //this method is called Provision methods
-    //here, only important thing is the return type
+    //We are telling dagger to provide the dependencies which are annotated with @Inject (field injection) in the MainActivity
     //function name can be anything
-    //these functions will serve as a template to generate DaggerLaptopComponent class
-    fun getLaptop(): Laptop
+    //Here we cant use superclass like AppCompatActivity
+    //For each activity we need to declare separate inject function responsible for that activity only
+    fun inject(mainActivity: MainActivity)
 }
